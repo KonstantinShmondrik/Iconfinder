@@ -24,7 +24,9 @@ extension IconsSeacherApi: EndPointType {
         case .getList(let query):
             return [
                 "query" : query,
-                "count" : 10
+                "count" : 10,
+                "premium" : "false",
+                "vector" : "false"
             ]
         }
     }

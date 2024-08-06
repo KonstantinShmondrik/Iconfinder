@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
         if let qwery {
             self.userRatesApiFactory.getIcons(query: qwery) { data, errorMessage in
                 guard let data else {
-                    self.error = errorMessage ?? ""
+                    self.error = errorMessage ?? Texts.ErrorMessage.general
                     print("ERROR: \(self.error)")
                     return
                 }

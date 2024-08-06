@@ -25,11 +25,7 @@ enum Texts {
     }
 
     enum ButtonTitles {
-        static let addToList = "Добавить в список"
-        static let close = "Закрыть"
-        static let removeFromList = "Удалить из списка"
-        static let logout = "Выйти из аккаунта"
-        static let login = "Войти в аккаунт"
+        static let search = "Найти"
     }
 
     enum NetworkLayerErrorMessages {
