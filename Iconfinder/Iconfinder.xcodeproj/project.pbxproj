@@ -35,6 +35,10 @@
 		00D73ECA2C6285AD00DE12BD /* HomeRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73EC92C6285AD00DE12BD /* HomeRequestFactory.swift */; };
 		00D73ECC2C6288CD00DE12BD /* ApiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73ECB2C6288CD00DE12BD /* ApiFactory.swift */; };
 		00D73ECE2C632FAD00DE12BD /* IconsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73ECD2C632FAD00DE12BD /* IconsModel.swift */; };
+		00D73ED42C63F84700DE12BD /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73ED32C63F84700DE12BD /* HomeBuilder.swift */; };
+		00D73ED62C63F97500DE12BD /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73ED52C63F97500DE12BD /* HomePresenter.swift */; };
+		00D73ED82C63FAB900DE12BD /* HomeViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73ED72C63FAB900DE12BD /* HomeViewInput.swift */; };
+		00D73EDA2C63FAF600DE12BD /* HomeViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73ED92C63FAF600DE12BD /* HomeViewOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,10 @@
 		00D73EC92C6285AD00DE12BD /* HomeRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRequestFactory.swift; sourceTree = "<group>"; };
 		00D73ECB2C6288CD00DE12BD /* ApiFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFactory.swift; sourceTree = "<group>"; };
 		00D73ECD2C632FAD00DE12BD /* IconsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsModel.swift; sourceTree = "<group>"; };
+		00D73ED32C63F84700DE12BD /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		00D73ED52C63F97500DE12BD /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		00D73ED72C63FAB900DE12BD /* HomeViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInput.swift; sourceTree = "<group>"; };
+		00D73ED92C63FAF600DE12BD /* HomeViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				00D73ECB2C6288CD00DE12BD /* ApiFactory.swift */,
+				00D73EC92C6285AD00DE12BD /* HomeRequestFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -201,10 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				00D73EBF2C61EB1600DE12BD /* Models */,
-				00D73E9B2C61425800DE12BD /* View */,
-				00D73E9A2C61424F00DE12BD /* Presenter */,
 				00D73E992C61424400DE12BD /* Builder */,
-				00D73EC92C6285AD00DE12BD /* HomeRequestFactory.swift */,
+				00D73E9A2C61424F00DE12BD /* Presenter */,
+				00D73E9B2C61425800DE12BD /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -212,6 +220,7 @@
 		00D73E992C61424400DE12BD /* Builder */ = {
 			isa = PBXGroup;
 			children = (
+				00D73ED32C63F84700DE12BD /* HomeBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -219,6 +228,7 @@
 		00D73E9A2C61424F00DE12BD /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				00D73ED52C63F97500DE12BD /* HomePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -226,7 +236,10 @@
 		00D73E9B2C61425800DE12BD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				00D73ED72C63FAB900DE12BD /* HomeViewInput.swift */,
+				00D73ED92C63FAF600DE12BD /* HomeViewOutput.swift */,
 				00D73E682C613DEB00DE12BD /* HomeViewController.swift */,
+				00D73ED22C63F81500DE12BD /* Utils */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,6 +315,13 @@
 				00D73EC42C61EDAF00DE12BD /* IconsSeacherApi.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		00D73ED22C63F81500DE12BD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +454,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D73EDA2C63FAF600DE12BD /* HomeViewOutput.swift in Sources */,
+				00D73ED82C63FAB900DE12BD /* HomeViewInput.swift in Sources */,
 				00D73EBA2C614FEF00DE12BD /* JSONParameterEncoder.swift in Sources */,
 				00D73EA42C6148CB00DE12BD /* Texts.swift in Sources */,
 				00D73EA92C614B7E00DE12BD /* AppColor.swift in Sources */,
@@ -446,6 +468,8 @@
 				00D73EB22C614F6800DE12BD /* ParameterEncoding.swift in Sources */,
 				00D73E652C613DEB00DE12BD /* AppDelegate.swift in Sources */,
 				00D73EB82C614FD400DE12BD /* URLParameterEncoder.swift in Sources */,
+				00D73ED42C63F84700DE12BD /* HomeBuilder.swift in Sources */,
+				00D73ED62C63F97500DE12BD /* HomePresenter.swift in Sources */,
 				00D73ECE2C632FAD00DE12BD /* IconsModel.swift in Sources */,
 				00D73EBE2C61519D00DE12BD /* AbstractRequestFactory.swift in Sources */,
 				00D73EB02C614F4B00DE12BD /* HTTPTask.swift in Sources */,
