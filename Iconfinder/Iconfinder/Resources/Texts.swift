@@ -9,6 +9,10 @@ import Foundation
 
 enum Texts {
 
+    enum Titles {
+        static let size = "Размер: %d x %d"
+    }
+
     enum ErrorMessage {
         static let general = "Что-то пошло не так.\nПопробуйте позже, должно получиться"
         static let noResults = "Ничего не найдено"

@@ -34,6 +34,7 @@
 		00D73EC52C61EDAF00DE12BD /* IconsSeacherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73EC42C61EDAF00DE12BD /* IconsSeacherApi.swift */; };
 		00D73ECA2C6285AD00DE12BD /* HomeRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73EC92C6285AD00DE12BD /* HomeRequestFactory.swift */; };
 		00D73ECC2C6288CD00DE12BD /* ApiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73ECB2C6288CD00DE12BD /* ApiFactory.swift */; };
+		00D73ECE2C632FAD00DE12BD /* IconsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73ECD2C632FAD00DE12BD /* IconsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		00D73EC42C61EDAF00DE12BD /* IconsSeacherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsSeacherApi.swift; sourceTree = "<group>"; };
 		00D73EC92C6285AD00DE12BD /* HomeRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRequestFactory.swift; sourceTree = "<group>"; };
 		00D73ECB2C6288CD00DE12BD /* ApiFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFactory.swift; sourceTree = "<group>"; };
+		00D73ECD2C632FAD00DE12BD /* IconsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,8 +200,7 @@
 		00D73E982C6141FE00DE12BD /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				00D73EC22C61ED0600DE12BD /* Entity */,
-				00D73EBF2C61EB1600DE12BD /* DTOModels */,
+				00D73EBF2C61EB1600DE12BD /* Models */,
 				00D73E9B2C61425800DE12BD /* View */,
 				00D73E9A2C61424F00DE12BD /* Presenter */,
 				00D73E992C61424400DE12BD /* Builder */,
@@ -286,19 +287,13 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		00D73EBF2C61EB1600DE12BD /* DTOModels */ = {
+		00D73EBF2C61EB1600DE12BD /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				00D73EC02C61EB2E00DE12BD /* IconsDTO.swift */,
+				00D73ECD2C632FAD00DE12BD /* IconsModel.swift */,
 			);
-			path = DTOModels;
-			sourceTree = "<group>";
-		};
-		00D73EC22C61ED0600DE12BD /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		00D73EC32C61ED8A00DE12BD /* API */ = {
@@ -451,6 +446,7 @@
 				00D73EB22C614F6800DE12BD /* ParameterEncoding.swift in Sources */,
 				00D73E652C613DEB00DE12BD /* AppDelegate.swift in Sources */,
 				00D73EB82C614FD400DE12BD /* URLParameterEncoder.swift in Sources */,
+				00D73ECE2C632FAD00DE12BD /* IconsModel.swift in Sources */,
 				00D73EBE2C61519D00DE12BD /* AbstractRequestFactory.swift in Sources */,
 				00D73EB02C614F4B00DE12BD /* HTTPTask.swift in Sources */,
 				00D73EA62C61490600DE12BD /* Constants.swift in Sources */,

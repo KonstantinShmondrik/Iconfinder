@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
 
     private var iconsList: IconsDTO?
     private let userRatesApiFactory = ApiFactory.makeIconsSeacherApi()
+    private let iconsModelFactory = IconsModelFactory()
     var error: String = ""
 
     override func viewDidLoad() {
@@ -28,7 +29,7 @@ class HomeViewController: UIViewController {
                     return
                 }
                 self.iconsList = data
-                print(data)
+                print(self.iconsModelFactory.makeModels(from: data))
             }
         }
     }

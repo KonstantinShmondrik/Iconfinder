@@ -11,7 +11,7 @@ import Foundation
 struct IconsDTO: Codable {
 
     let totalCount: Int
-    let icons: [Icon]
+    let icons: [Icon]?
 
     enum CodingKeys: String, CodingKey {
 
@@ -22,15 +22,15 @@ struct IconsDTO: Codable {
 
 // MARK: - Icon
 struct Icon: Codable {
-    let iconID: Int
-    let tags: [String]
-    let publishedAt: String
-    let isPremium: Bool
-    let type: TypeEnum
-    let containers: [Container]
-    let rasterSizes: [RasterSize]
-    let styles, categories: [Category]
-    let isIconGlyph: Bool
+    let iconID: Int?
+    let tags: [String]?
+    let publishedAt: String?
+    let isPremium: Bool?
+    let type: TypeEnum?
+    let containers: [Container]?
+    let rasterSizes: [RasterSize]?
+    let styles, categories: [Category]?
+    let isIconGlyph: Bool?
 
     enum CodingKeys: String, CodingKey {
         case iconID = "icon_id"
@@ -46,13 +46,13 @@ struct Icon: Codable {
 
 // MARK: - Category
 struct Category: Codable {
-    let identifier, name: String
+    let identifier, name: String?
 }
 
 // MARK: - Container
 struct Container: Codable {
-    let format: ContainerFormat
-    let downloadURL: String
+    let format: ContainerFormat?
+    let downloadURL: String?
 
     enum CodingKeys: String, CodingKey {
         case format
@@ -67,8 +67,8 @@ enum ContainerFormat: String, Codable {
 
 // MARK: - RasterSize
 struct RasterSize: Codable {
-    let formats: [FormatElement]
-    let size, sizeWidth, sizeHeight: Int
+    let formats: [FormatElement]?
+    let size, sizeWidth, sizeHeight: Int?
 
     enum CodingKeys: String, CodingKey {
         case formats, size
@@ -79,9 +79,9 @@ struct RasterSize: Codable {
 
 // MARK: - FormatElement
 struct FormatElement: Codable {
-    let format: FormatFormat
-    let previewURL: String
-    let downloadURL: String
+    let format: FormatFormat?
+    let previewURL: String?
+    let downloadURL: String?
 
     enum CodingKeys: String, CodingKey {
         case format
