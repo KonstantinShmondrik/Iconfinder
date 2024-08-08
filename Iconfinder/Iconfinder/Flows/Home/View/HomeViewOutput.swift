@@ -10,4 +10,5 @@ import Foundation
 protocol HomeViewOutput: AnyObject {
 
     func getIconsList(qwery: String?)
+    func viewDidSelectEntity(entity: IconsModel)
 }

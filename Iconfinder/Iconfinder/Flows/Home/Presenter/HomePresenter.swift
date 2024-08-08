@@ -44,4 +44,8 @@ extension HomePresenter: HomeViewOutput {
             }
         }
     }
+
+    func viewDidSelectEntity(entity: IconsModel) {
+        print(entity)
+    }
 }
