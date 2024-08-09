@@ -13,6 +13,16 @@ enum Texts {
         static let size = "Размер: %d x %d"
     }
 
+    enum AlertMassege {
+        static let error = "Ошибка"
+        static let savedImage = "Изображение сохранено"
+        static let cansel = "Отмена"
+        static let safeImage = "Хотите сохранить изображение в галерею?"
+        static let OK = "Ok"
+        static let yes = "Да"
+        static let emptyIcons = "По вашему запросу ничего не найдено"
+    }
+
     enum ErrorMessage {
         static let general = "Что-то пошло не так.\nПопробуйте позже, должно получиться"
         static let noResults = "Ничего не найдено"

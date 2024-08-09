@@ -13,6 +13,12 @@ class HomeViewController: UIViewController {
 
     let presenter: HomeViewOutput
     var models: [IconsModel] = []
+    var isLoading: Bool = false {
+        didSet {
+            view.isUserInteractionEnabled = !isLoading
+            reloadData()
+        }
+    }
 
     private let searchFTextField = PaddedTextField()
     private let searchButton = UIButton(type: .system)
@@ -111,6 +117,7 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.registerCell(SearchResultTableCell.self)
+        tableView.registerCell(ShimmerTableCell.self)
 
         searchButton.addTarget(self, action: #selector(searchAction), for: .touchUpInside)
 
@@ -155,13 +162,19 @@ extension HomeViewController: UITableViewDelegate {
 extension HomeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
+        return isLoading ? 10 : models.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell: SearchResultTableCell = tableView.cell(forRowAt: indexPath) else { return UITableViewCell() }
-        cell.configure(with: models[indexPath.row])
-        return cell
+        if isLoading {
+            guard let cell: ShimmerTableCell = tableView.cell(forRowAt: indexPath) else { return UITableViewCell() }
+            cell.startAnimating()
+            return cell
+        } else {
+            guard let cell: SearchResultTableCell = tableView.cell(forRowAt: indexPath) else { return UITableViewCell() }
+            cell.configure(with: models[indexPath.row])
+            return cell
+        }
     }
 }
 
@@ -172,6 +185,10 @@ extension HomeViewController: HomeViewInput {
     func reloadData() {
         tableView.reloadData()
         print(models)
+    }
+
+    func showAlert(title: String, message: String? = nil, actions: [UIAlertAction]? = nil) {
+        setAlert(title: title, message: message, actions: actions)
     }
 }
 

@@ -10,6 +10,9 @@
 		00BE68AA2C65423F00BCA20B /* SearchResultTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68A92C65423F00BCA20B /* SearchResultTableCell.swift */; };
 		00BE68AD2C65433900BCA20B /* UIImageViewAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68AC2C65433900BCA20B /* UIImageViewAsync.swift */; };
 		00BE68AF2C6554B900BCA20B /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68AE2C6554B900BCA20B /* PaddedTextField.swift */; };
+		00BE68ED2C668F3300BCA20B /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68EC2C668F3300BCA20B /* UIViewController+Alert.swift */; };
+		00BE68EF2C66A45F00BCA20B /* ShimmerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68EE2C66A45F00BCA20B /* ShimmerTableCell.swift */; };
+		00BE68F12C66A5FA00BCA20B /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68F02C66A5FA00BCA20B /* ShimmerView.swift */; };
 		00D73E652C613DEB00DE12BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73E642C613DEB00DE12BD /* AppDelegate.swift */; };
 		00D73E672C613DEB00DE12BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73E662C613DEB00DE12BD /* SceneDelegate.swift */; };
 		00D73E692C613DEB00DE12BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73E682C613DEB00DE12BD /* HomeViewController.swift */; };
@@ -65,6 +68,9 @@
 		00BE68A92C65423F00BCA20B /* SearchResultTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableCell.swift; sourceTree = "<group>"; };
 		00BE68AC2C65433900BCA20B /* UIImageViewAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewAsync.swift; sourceTree = "<group>"; };
 		00BE68AE2C6554B900BCA20B /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
+		00BE68EC2C668F3300BCA20B /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		00BE68EE2C66A45F00BCA20B /* ShimmerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerTableCell.swift; sourceTree = "<group>"; };
+		00BE68F02C66A5FA00BCA20B /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
 		00D73E612C613DEB00DE12BD /* Iconfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iconfinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D73E642C613DEB00DE12BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00D73E662C613DEB00DE12BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 			children = (
 				00BE68AC2C65433900BCA20B /* UIImageViewAsync.swift */,
 				00BE68AE2C6554B900BCA20B /* PaddedTextField.swift */,
+				00BE68F02C66A5FA00BCA20B /* ShimmerView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -274,6 +281,7 @@
 			children = (
 				00D73E9E2C61464800DE12BD /* UITableView+RegisterCell.swift */,
 				00D73EA02C6146B900DE12BD /* UIView+addSubviews.swift */,
+				00BE68EC2C668F3300BCA20B /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -337,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				00BE68A92C65423F00BCA20B /* SearchResultTableCell.swift */,
+				00BE68EE2C66A45F00BCA20B /* ShimmerTableCell.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -473,8 +482,10 @@
 			files = (
 				00D73EDA2C63FAF600DE12BD /* HomeViewOutput.swift in Sources */,
 				00BE68AF2C6554B900BCA20B /* PaddedTextField.swift in Sources */,
+				00BE68ED2C668F3300BCA20B /* UIViewController+Alert.swift in Sources */,
 				00D73ED82C63FAB900DE12BD /* HomeViewInput.swift in Sources */,
 				00D73EBA2C614FEF00DE12BD /* JSONParameterEncoder.swift in Sources */,
+				00BE68EF2C66A45F00BCA20B /* ShimmerTableCell.swift in Sources */,
 				00D73EA42C6148CB00DE12BD /* Texts.swift in Sources */,
 				00D73EA92C614B7E00DE12BD /* AppColor.swift in Sources */,
 				00D73EAB2C614BCA00DE12BD /* AppFont.swift in Sources */,
@@ -496,6 +507,7 @@
 				00D73EB62C614FA800DE12BD /* Router.swift in Sources */,
 				00D73EBC2C61500900DE12BD /* EndPointType.swift in Sources */,
 				00D73ECC2C6288CD00DE12BD /* ApiFactory.swift in Sources */,
+				00BE68F12C66A5FA00BCA20B /* ShimmerView.swift in Sources */,
 				00D73EB42C614F8F00DE12BD /* HTTPMethod.swift in Sources */,
 				00D73EC52C61EDAF00DE12BD /* IconsSeacherApi.swift in Sources */,
 				00D73E9F2C61464800DE12BD /* UITableView+RegisterCell.swift in Sources */,
@@ -677,6 +689,7 @@
 				DEVELOPMENT_TEAM = T8K8YS2863;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Iconfinder/Resources/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Для сохранения изображений в галерею";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -704,6 +717,7 @@
 				DEVELOPMENT_TEAM = T8K8YS2863;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Iconfinder/Resources/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Для сохранения изображений в галерею";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
