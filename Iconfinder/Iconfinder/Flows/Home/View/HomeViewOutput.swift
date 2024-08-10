@@ -11,4 +11,5 @@ protocol HomeViewOutput: AnyObject {
 
     func getIconsList(qwery: String?)
     func viewDidSelectEntity(entity: IconsModel)
+    func getBaseAlert(title: String, message: String?)
 }

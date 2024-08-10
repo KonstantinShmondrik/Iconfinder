@@ -16,6 +16,7 @@ enum Texts {
     enum AlertMassege {
         static let error = "Ошибка"
         static let savedImage = "Изображение сохранено"
+        static let savedImageError = "Данные не сохранились"
         static let cansel = "Отмена"
         static let safeImage = "Хотите сохранить изображение в галерею?"
         static let OK = "Ok"

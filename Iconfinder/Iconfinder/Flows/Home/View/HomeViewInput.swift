@@ -14,4 +14,5 @@ protocol HomeViewInput: AnyObject {
 
     func reloadData()
     func showAlert(title: String, message: String?, actions: [UIAlertAction]?)
+    func safeImage(with image: UIImage?)
 }

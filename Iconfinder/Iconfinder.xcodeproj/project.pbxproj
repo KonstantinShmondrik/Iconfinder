@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		006256642C67B555008275D5 /* CleareCashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006256632C67B555008275D5 /* CleareCashService.swift */; };
 		00BE68AA2C65423F00BCA20B /* SearchResultTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68A92C65423F00BCA20B /* SearchResultTableCell.swift */; };
 		00BE68AD2C65433900BCA20B /* UIImageViewAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68AC2C65433900BCA20B /* UIImageViewAsync.swift */; };
 		00BE68AF2C6554B900BCA20B /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68AE2C6554B900BCA20B /* PaddedTextField.swift */; };
 		00BE68ED2C668F3300BCA20B /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68EC2C668F3300BCA20B /* UIViewController+Alert.swift */; };
 		00BE68EF2C66A45F00BCA20B /* ShimmerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68EE2C66A45F00BCA20B /* ShimmerTableCell.swift */; };
 		00BE68F12C66A5FA00BCA20B /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68F02C66A5FA00BCA20B /* ShimmerView.swift */; };
+		00BE68F42C67792B00BCA20B /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68F32C67792B00BCA20B /* FileManagerService.swift */; };
+		00BE68F62C6779E200BCA20B /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68F52C6779E200BCA20B /* String+Extension.swift */; };
+		00BE68F82C677EC100BCA20B /* DownloadImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68F72C677EC100BCA20B /* DownloadImageService.swift */; };
 		00D73E652C613DEB00DE12BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73E642C613DEB00DE12BD /* AppDelegate.swift */; };
 		00D73E672C613DEB00DE12BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73E662C613DEB00DE12BD /* SceneDelegate.swift */; };
 		00D73E692C613DEB00DE12BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D73E682C613DEB00DE12BD /* HomeViewController.swift */; };
@@ -65,12 +69,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		006256632C67B555008275D5 /* CleareCashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleareCashService.swift; sourceTree = "<group>"; };
 		00BE68A92C65423F00BCA20B /* SearchResultTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableCell.swift; sourceTree = "<group>"; };
 		00BE68AC2C65433900BCA20B /* UIImageViewAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewAsync.swift; sourceTree = "<group>"; };
 		00BE68AE2C6554B900BCA20B /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 		00BE68EC2C668F3300BCA20B /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		00BE68EE2C66A45F00BCA20B /* ShimmerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerTableCell.swift; sourceTree = "<group>"; };
 		00BE68F02C66A5FA00BCA20B /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
+		00BE68F32C67792B00BCA20B /* FileManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
+		00BE68F52C6779E200BCA20B /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		00BE68F72C677EC100BCA20B /* DownloadImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageService.swift; sourceTree = "<group>"; };
 		00D73E612C613DEB00DE12BD /* Iconfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iconfinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D73E642C613DEB00DE12BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00D73E662C613DEB00DE12BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +150,16 @@
 				00BE68F02C66A5FA00BCA20B /* ShimmerView.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		00BE68F22C6778F500BCA20B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				00BE68F32C67792B00BCA20B /* FileManagerService.swift */,
+				00BE68F72C677EC100BCA20B /* DownloadImageService.swift */,
+				006256632C67B555008275D5 /* CleareCashService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		00D73E582C613DEB00DE12BD = {
@@ -269,6 +287,7 @@
 		00D73E9C2C6142BF00DE12BD /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				00BE68F22C6778F500BCA20B /* Services */,
 				00D73EAC2C614E7200DE12BD /* Network */,
 				00D73EA72C614B6A00DE12BD /* Helpers */,
 				00D73E9D2C61462000DE12BD /* Extensions */,
@@ -282,6 +301,7 @@
 				00D73E9E2C61464800DE12BD /* UITableView+RegisterCell.swift */,
 				00D73EA02C6146B900DE12BD /* UIView+addSubviews.swift */,
 				00BE68EC2C668F3300BCA20B /* UIViewController+Alert.swift */,
+				00BE68F52C6779E200BCA20B /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -488,6 +508,7 @@
 				00BE68EF2C66A45F00BCA20B /* ShimmerTableCell.swift in Sources */,
 				00D73EA42C6148CB00DE12BD /* Texts.swift in Sources */,
 				00D73EA92C614B7E00DE12BD /* AppColor.swift in Sources */,
+				00BE68F62C6779E200BCA20B /* String+Extension.swift in Sources */,
 				00D73EAB2C614BCA00DE12BD /* AppFont.swift in Sources */,
 				00BE68AD2C65433900BCA20B /* UIImageViewAsync.swift in Sources */,
 				00D73EAE2C614EBC00DE12BD /* HttpConstants.swift in Sources */,
@@ -498,15 +519,18 @@
 				00D73EB22C614F6800DE12BD /* ParameterEncoding.swift in Sources */,
 				00D73E652C613DEB00DE12BD /* AppDelegate.swift in Sources */,
 				00D73EB82C614FD400DE12BD /* URLParameterEncoder.swift in Sources */,
+				006256642C67B555008275D5 /* CleareCashService.swift in Sources */,
 				00D73ED42C63F84700DE12BD /* HomeBuilder.swift in Sources */,
 				00D73ED62C63F97500DE12BD /* HomePresenter.swift in Sources */,
 				00D73ECE2C632FAD00DE12BD /* IconsModel.swift in Sources */,
 				00D73EBE2C61519D00DE12BD /* AbstractRequestFactory.swift in Sources */,
 				00D73EB02C614F4B00DE12BD /* HTTPTask.swift in Sources */,
+				00BE68F42C67792B00BCA20B /* FileManagerService.swift in Sources */,
 				00D73EA62C61490600DE12BD /* Constants.swift in Sources */,
 				00D73EB62C614FA800DE12BD /* Router.swift in Sources */,
 				00D73EBC2C61500900DE12BD /* EndPointType.swift in Sources */,
 				00D73ECC2C6288CD00DE12BD /* ApiFactory.swift in Sources */,
+				00BE68F82C677EC100BCA20B /* DownloadImageService.swift in Sources */,
 				00BE68F12C66A5FA00BCA20B /* ShimmerView.swift in Sources */,
 				00D73EB42C614F8F00DE12BD /* HTTPMethod.swift in Sources */,
 				00D73EC52C61EDAF00DE12BD /* IconsSeacherApi.swift in Sources */,
