@@ -10,32 +10,60 @@ import XCTest
 final class IconfinderUITests: XCTestCase {
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        try? super.setUpWithError()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        try? super.tearDownWithError()
     }
 
     func testExample() throws {
-        // UI tests must launch the application that they test.
+        
         let app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
     func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
+        if #available(iOS 14.0, *) {
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
             }
         }
+    }
+
+    func testSearchIcons() {
+        let app = XCUIApplication()
+        app.launch()
+
+        let homeViewController = app.otherElements["homeViewController"].firstMatch
+        let searchFTextField = app.textFields["searchFTextField"].firstMatch
+        let searchButton = app.buttons["searchButton"].firstMatch
+
+        searchFTextField.tap()
+        searchFTextField.typeText("Arrow")
+
+        searchButton.tap()
+        XCTAssert(homeViewController.waitForExistence(timeout: 5))
+    }
+
+    func testErrortSearchIcons() {
+        let app = XCUIApplication()
+        app.launch()
+
+        let homeViewController = app.otherElements["homeViewController"].firstMatch
+        let searchFTextField = app.textFields["searchFTextField"].firstMatch
+        let searchButton = app.buttons["searchButton"].firstMatch
+        let alert = app.alerts.firstMatch
+
+        searchFTextField.tap()
+        searchFTextField.typeText("Arrow 3")
+
+        searchButton.tap()
+        XCTAssert(alert.waitForExistence(timeout: 5))
+
+        alert.buttons.firstMatch.tap()
+        XCTAssert(homeViewController.waitForExistence(timeout: 2))
+
     }
 }

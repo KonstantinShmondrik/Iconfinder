@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
         setLayoutConstraints()
         stylize()
         setActions()
+        setupAccessibility()
     }
     
     
@@ -125,7 +126,14 @@ class HomeViewController: UIViewController {
         tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
     }
-    
+
+    private func setupAccessibility() {
+        view.accessibilityIdentifier = "homeViewController"
+        searchFTextField.accessibilityIdentifier = "searchFTextField"
+        searchButton.accessibilityIdentifier = "searchButton"
+        tableView.accessibilityIdentifier = "tableView"
+    }
+
     @objc func searchAction() {
         guard let text = searchFTextField.text,
               !text.isEmpty else { return }
