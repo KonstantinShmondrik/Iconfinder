@@ -20,3 +20,7 @@
 - URLSession (для сетевого слоя)
 - UXTest
 - UITests
+
+### Демо:
+
+![screen-gif](https://github.com/KonstantinShmondrik/Iconfinder/blob/main/showTest.GIF)
