@@ -88,7 +88,7 @@ final class HomePresenter {
         )
     }
 
-    private func create(
+    private func create( 
         icons: LocalQueryRequest,
         icon: IconsModel,
         completion: (LocalIcon) -> Void
