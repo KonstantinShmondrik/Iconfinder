@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="22G630" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="LocalIcon" representedClassName="LocalIcon" syncable="YES">
+        <attribute name="downloadURL" optional="YES" attributeType="String"/>
+        <attribute name="iconID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="previewURL" optional="YES" attributeType="String"/>
+        <attribute name="sizes" optional="YES" attributeType="String"/>
+        <attribute name="tags" optional="YES" attributeType="String"/>
+        <relationship name="icon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocalQueryRequest" inverseName="icons" inverseEntity="LocalQueryRequest"/>
+    </entity>
+    <entity name="LocalQueryRequest" representedClassName=".LocalQueryRequest" syncable="YES">
+        <attribute name="query" optional="YES" attributeType="String"/>
+        <relationship name="icons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LocalIcon" inverseName="icon" inverseEntity="LocalIcon"/>
+    </entity>
+</model>

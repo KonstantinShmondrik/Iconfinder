@@ -28,4 +28,8 @@ extension String {
         }
         return hash.map { String(format: "%02hhx", $0) }.joined()
     }
+
+    func removeTrailingSpace() -> String {
+        return self.trimmingCharacters(in: .whitespaces)
+    }
 }

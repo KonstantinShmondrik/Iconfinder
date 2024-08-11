@@ -26,7 +26,6 @@ class DownloadImageService {
         guard let url = URL(string: link) else { return }
         
         let fileName = link.sha256() + ".png"
-        print(fileName)
         
         do {
             isImage = try fileManagerService.doesFileExist(with: fileName, in: .images)

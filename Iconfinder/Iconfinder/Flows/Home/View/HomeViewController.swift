@@ -130,7 +130,10 @@ class HomeViewController: UIViewController {
         guard let text = searchFTextField.text,
               !text.isEmpty else { return }
         hideKeyboard()
-        presenter.getIconsList(qwery: text)
+        let textMoifired = text
+            .removeTrailingSpace()
+            .lowercased()
+        presenter.getIconsList(query: textMoifired)
     }
     
     @objc func hideKeyboard() {
@@ -192,7 +195,6 @@ extension HomeViewController: HomeViewInput {
     
     func reloadData() {
         tableView.reloadData()
-        print(models)
     }
     
     func showAlert(title: String, message: String? = nil, actions: [UIAlertAction]? = nil) {

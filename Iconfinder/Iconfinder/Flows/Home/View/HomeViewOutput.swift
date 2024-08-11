@@ -9,7 +9,7 @@ import Foundation
 
 protocol HomeViewOutput: AnyObject {
 
-    func getIconsList(qwery: String?)
+    func getIconsList(query: String?)
     func viewDidSelectEntity(entity: IconsModel)
     func getBaseAlert(title: String, message: String?)
 }

@@ -10,6 +10,7 @@ import UIKit
 class CleareCashService {
 
     private let fileManagerService = FileManagerService()
+    private let coreDataService = CoreDataService(databaseName: .icons)
 
     private func cleareFileManager() {
         do {
@@ -20,7 +21,7 @@ class CleareCashService {
     }
 
     private func cleareCoreData() {
-
+        coreDataService.recreateDatabase()
     }
 
     func cleareCash() {

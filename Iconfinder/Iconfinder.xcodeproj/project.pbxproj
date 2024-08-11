@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001FFE412C67F6E200CC3489 /* IconsDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 001FFE3F2C67F6E200CC3489 /* IconsDataBase.xcdatamodeld */; };
+		001FFE722C68253E00CC3489 /* LocalQueryRequest+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001FFE6E2C68253E00CC3489 /* LocalQueryRequest+CoreDataClass.swift */; };
+		001FFE732C68253E00CC3489 /* LocalQueryRequest+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001FFE6F2C68253E00CC3489 /* LocalQueryRequest+CoreDataProperties.swift */; };
+		001FFE742C68253E00CC3489 /* LocalIcon+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001FFE702C68253E00CC3489 /* LocalIcon+CoreDataClass.swift */; };
+		001FFE752C68253E00CC3489 /* LocalIcon+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001FFE712C68253E00CC3489 /* LocalIcon+CoreDataProperties.swift */; };
 		006256642C67B555008275D5 /* CleareCashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006256632C67B555008275D5 /* CleareCashService.swift */; };
+		006256662C67B9D7008275D5 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006256652C67B9D7008275D5 /* CoreDataService.swift */; };
 		00BE68AA2C65423F00BCA20B /* SearchResultTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68A92C65423F00BCA20B /* SearchResultTableCell.swift */; };
 		00BE68AD2C65433900BCA20B /* UIImageViewAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68AC2C65433900BCA20B /* UIImageViewAsync.swift */; };
 		00BE68AF2C6554B900BCA20B /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE68AE2C6554B900BCA20B /* PaddedTextField.swift */; };
@@ -69,7 +75,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001FFE402C67F6E200CC3489 /* IconsDataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IconsDataBase.xcdatamodel; sourceTree = "<group>"; };
+		001FFE6E2C68253E00CC3489 /* LocalQueryRequest+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalQueryRequest+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		001FFE6F2C68253E00CC3489 /* LocalQueryRequest+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalQueryRequest+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		001FFE702C68253E00CC3489 /* LocalIcon+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalIcon+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		001FFE712C68253E00CC3489 /* LocalIcon+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalIcon+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		006256632C67B555008275D5 /* CleareCashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleareCashService.swift; sourceTree = "<group>"; };
+		006256652C67B9D7008275D5 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		00BE68A92C65423F00BCA20B /* SearchResultTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableCell.swift; sourceTree = "<group>"; };
 		00BE68AC2C65433900BCA20B /* UIImageViewAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewAsync.swift; sourceTree = "<group>"; };
 		00BE68AE2C6554B900BCA20B /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
@@ -142,6 +154,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0062566E2C67E992008275D5 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				001FFE6E2C68253E00CC3489 /* LocalQueryRequest+CoreDataClass.swift */,
+				001FFE6F2C68253E00CC3489 /* LocalQueryRequest+CoreDataProperties.swift */,
+				001FFE702C68253E00CC3489 /* LocalIcon+CoreDataClass.swift */,
+				001FFE712C68253E00CC3489 /* LocalIcon+CoreDataProperties.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
 		00BE68AB2C65430300BCA20B /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +181,7 @@
 				00BE68F32C67792B00BCA20B /* FileManagerService.swift */,
 				00BE68F72C677EC100BCA20B /* DownloadImageService.swift */,
 				006256632C67B555008275D5 /* CleareCashService.swift */,
+				006256652C67B9D7008275D5 /* CoreDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -314,6 +338,7 @@
 				00D73E6D2C613DEE00DE12BD /* Assets.xcassets */,
 				00D73E6F2C613DEE00DE12BD /* LaunchScreen.storyboard */,
 				00D73E722C613DEE00DE12BD /* Info.plist */,
+				001FFE3F2C67F6E200CC3489 /* IconsDataBase.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -347,6 +372,7 @@
 		00D73EBF2C61EB1600DE12BD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0062566E2C67E992008275D5 /* Local */,
 				00D73EC02C61EB2E00DE12BD /* IconsDTO.swift */,
 				00D73ECD2C632FAD00DE12BD /* IconsModel.swift */,
 			);
@@ -500,11 +526,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001FFE742C68253E00CC3489 /* LocalIcon+CoreDataClass.swift in Sources */,
 				00D73EDA2C63FAF600DE12BD /* HomeViewOutput.swift in Sources */,
 				00BE68AF2C6554B900BCA20B /* PaddedTextField.swift in Sources */,
 				00BE68ED2C668F3300BCA20B /* UIViewController+Alert.swift in Sources */,
 				00D73ED82C63FAB900DE12BD /* HomeViewInput.swift in Sources */,
 				00D73EBA2C614FEF00DE12BD /* JSONParameterEncoder.swift in Sources */,
+				001FFE412C67F6E200CC3489 /* IconsDataBase.xcdatamodeld in Sources */,
 				00BE68EF2C66A45F00BCA20B /* ShimmerTableCell.swift in Sources */,
 				00D73EA42C6148CB00DE12BD /* Texts.swift in Sources */,
 				00D73EA92C614B7E00DE12BD /* AppColor.swift in Sources */,
@@ -526,16 +554,20 @@
 				00D73EBE2C61519D00DE12BD /* AbstractRequestFactory.swift in Sources */,
 				00D73EB02C614F4B00DE12BD /* HTTPTask.swift in Sources */,
 				00BE68F42C67792B00BCA20B /* FileManagerService.swift in Sources */,
+				001FFE732C68253E00CC3489 /* LocalQueryRequest+CoreDataProperties.swift in Sources */,
 				00D73EA62C61490600DE12BD /* Constants.swift in Sources */,
 				00D73EB62C614FA800DE12BD /* Router.swift in Sources */,
 				00D73EBC2C61500900DE12BD /* EndPointType.swift in Sources */,
 				00D73ECC2C6288CD00DE12BD /* ApiFactory.swift in Sources */,
 				00BE68F82C677EC100BCA20B /* DownloadImageService.swift in Sources */,
 				00BE68F12C66A5FA00BCA20B /* ShimmerView.swift in Sources */,
+				001FFE752C68253E00CC3489 /* LocalIcon+CoreDataProperties.swift in Sources */,
+				006256662C67B9D7008275D5 /* CoreDataService.swift in Sources */,
 				00D73EB42C614F8F00DE12BD /* HTTPMethod.swift in Sources */,
 				00D73EC52C61EDAF00DE12BD /* IconsSeacherApi.swift in Sources */,
 				00D73E9F2C61464800DE12BD /* UITableView+RegisterCell.swift in Sources */,
 				00D73E672C613DEB00DE12BD /* SceneDelegate.swift in Sources */,
+				001FFE722C68253E00CC3489 /* LocalQueryRequest+CoreDataClass.swift in Sources */,
 				00BE68AA2C65423F00BCA20B /* SearchResultTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -875,6 +907,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		001FFE3F2C67F6E200CC3489 /* IconsDataBase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				001FFE402C67F6E200CC3489 /* IconsDataBase.xcdatamodel */,
+			);
+			currentVersion = 001FFE402C67F6E200CC3489 /* IconsDataBase.xcdatamodel */;
+			path = IconsDataBase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 00D73E592C613DEB00DE12BD /* Project object */;
 }
