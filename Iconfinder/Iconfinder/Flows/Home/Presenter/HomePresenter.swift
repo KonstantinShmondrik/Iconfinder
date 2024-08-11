@@ -24,29 +24,29 @@ final class HomePresenter {
     // MARK: - Private functions
 
     private func getSafeImageAlert(with imageName: String) {
-        let title = Texts.AlertMassege.safeImage
-        let yesAction = UIAlertAction(title: Texts.AlertMassege.yes, style: .default) { _ in
+        let title = Texts.AlertMessage.safeImage
+        let yesAction = UIAlertAction(title: Texts.AlertMessage.yes, style: .default) { _ in
             self.safeImage(imageName)
         }
 
-        let NoAction = UIAlertAction(title: Texts.AlertMassege.cansel, style: .default)
+        let NoAction = UIAlertAction(title: Texts.AlertMessage.cansel, style: .default)
         viewInput?.showAlert(title: title, message: nil, actions: [yesAction, NoAction])
     }
 
     private func getSavedImageAlert(isSaved: Bool) {
         var titel = ""
         if isSaved {
-            titel = Texts.AlertMassege.savedImage
+            titel = Texts.AlertMessage.savedImage
         } else {
-            titel = Texts.AlertMassege.error
+            titel = Texts.AlertMessage.error
         }
         let action = UIAlertAction(title: titel, style: .default)
         viewInput?.showAlert(title: titel, message: nil, actions: [action])
     }
 
     private func getEmptiIconsAlert() {
-        let OKAction = UIAlertAction(title: Texts.AlertMassege.OK, style: .cancel)
-        viewInput?.showAlert(title: Texts.AlertMassege.emptyIcons, message: nil, actions: [OKAction])
+        let OKAction = UIAlertAction(title: Texts.AlertMessage.OK, style: .cancel)
+        viewInput?.showAlert(title: Texts.AlertMessage.emptyIcons, message: nil, actions: [OKAction])
     }
 
     private func safeImage(_ imageName: String) {
@@ -54,7 +54,7 @@ final class HomePresenter {
         do {
             image = try fileManagerService.image(withName: imageName.sha256() + ".png", in: .images)
         } catch {
-            getBaseAlert(title: Texts.AlertMassege.error, message: Texts.ErrorMessage.failLoading)
+            getBaseAlert(title: Texts.AlertMessage.error, message: Texts.ErrorMessage.failLoading)
             dump(error)
         }
         viewInput?.safeImage(with: image)
@@ -65,7 +65,7 @@ final class HomePresenter {
             defer { self.viewInput?.isLoading = false }
 
             guard let data else {
-                self.getBaseAlert(title: Texts.AlertMassege.error, message: errorMessage ?? Texts.ErrorMessage.general)
+                self.getBaseAlert(title: Texts.AlertMessage.error, message: errorMessage ?? Texts.ErrorMessage.general)
                 return
             }
             self.iconsList = data
@@ -130,7 +130,7 @@ final class HomePresenter {
             }
         } catch {
             dump(error)
-            getBaseAlert(title: Texts.AlertMassege.error, message: Texts.ErrorMessage.failLoading)
+            getBaseAlert(title: Texts.AlertMessage.error, message: Texts.ErrorMessage.failLoading)
             viewInput?.isLoading = false
         }
     }
@@ -149,7 +149,7 @@ final class HomePresenter {
 extension HomePresenter: HomeViewOutput {
 
     func getBaseAlert(title: String, message: String?) {
-        let OKAction = UIAlertAction(title: Texts.AlertMassege.OK, style: .cancel)
+        let OKAction = UIAlertAction(title: Texts.AlertMessage.OK, style: .cancel)
         viewInput?.showAlert(title: title, message: message, actions: [OKAction])
     }
 

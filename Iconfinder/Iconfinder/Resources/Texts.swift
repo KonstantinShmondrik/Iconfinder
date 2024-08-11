@@ -13,7 +13,7 @@ enum Texts {
         static let size = "Размер: %d x %d"
     }
 
-    enum AlertMassege {
+    enum AlertMessage {
         static let error = "Ошибка"
         static let savedImage = "Изображение сохранено"
         static let savedImageError = "Данные не сохранились"
@@ -26,17 +26,7 @@ enum Texts {
 
     enum ErrorMessage {
         static let general = "Что-то пошло не так.\nПопробуйте позже, должно получиться"
-        static let noResults = "Ничего не найдено"
         static let failLoading = "Данные не загрузились"
-        static let generalDescription = "Попробуйте позже, должно получиться"
-    }
-
-    enum LoadingMessage {
-        static let inProgress = "Загрузка..."
-    }
-
-    enum OtherMessage {
-
     }
 
     enum ButtonTitles {

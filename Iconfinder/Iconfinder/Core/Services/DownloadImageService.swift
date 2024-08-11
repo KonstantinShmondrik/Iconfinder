@@ -22,7 +22,7 @@ class DownloadImageService {
     /// Загрузка картинок по URL
     /// - Parameters:
     ///   - link: URL  изображения
-    func downloadedImage(from link: String, complition: ((UIImage) -> Void)? = nil) {
+    func downloadedImage(from link: String, completion: ((UIImage) -> Void)? = nil) {
         guard let url = URL(string: link) else { return }
         
         let fileName = link.sha256() + ".png"
@@ -40,7 +40,7 @@ class DownloadImageService {
             } catch {
                 dump(error)
             }
-            complition?(image)
+            completion?(image)
             return
         }
         
@@ -85,7 +85,7 @@ class DownloadImageService {
             }
             
             DispatchQueue.main.async {
-                complition?(image)
+                completion?(image)
             }
         }
         task?.resume()

@@ -138,10 +138,10 @@ class HomeViewController: UIViewController {
         guard let text = searchFTextField.text,
               !text.isEmpty else { return }
         hideKeyboard()
-        let textMoifired = text
+        let textModified = text
             .removeTrailingSpace()
             .lowercased()
-        presenter.getIconsList(query: textMoifired)
+        presenter.getIconsList(query: textModified)
     }
     
     @objc func hideKeyboard() {
@@ -150,9 +150,9 @@ class HomeViewController: UIViewController {
     
     @objc func image(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
         if error != nil {
-            presenter.getBaseAlert(title: Texts.AlertMassege.error, message: Texts.AlertMassege.savedImageError)
+            presenter.getBaseAlert(title: Texts.AlertMessage.error, message: Texts.AlertMessage.savedImageError)
         } else {
-            presenter.getBaseAlert(title: Texts.AlertMassege.savedImage, message: nil)
+            presenter.getBaseAlert(title: Texts.AlertMessage.savedImage, message: nil)
         }
     }
     
@@ -211,7 +211,7 @@ extension HomeViewController: HomeViewInput {
     
     func safeImage(with image: UIImage?) {
         guard let imageToSave = image else {
-            presenter.getBaseAlert(title: Texts.AlertMassege.error, message: Texts.AlertMassege.savedImageError)
+            presenter.getBaseAlert(title: Texts.AlertMessage.error, message: Texts.AlertMessage.savedImageError)
             return
         }
         UIImageWriteToSavedPhotosAlbum(imageToSave, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)

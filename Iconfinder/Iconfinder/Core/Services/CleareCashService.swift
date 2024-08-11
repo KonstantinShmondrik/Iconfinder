@@ -12,7 +12,7 @@ class CleareCashService {
     private let fileManagerService = FileManagerService()
     private let coreDataService = CoreDataService(databaseName: .icons)
 
-    private func cleareFileManager() {
+    private func clearFileManager() {
         do {
             try fileManagerService.removeAllFiles(in: .images)
         } catch {
@@ -24,8 +24,8 @@ class CleareCashService {
         coreDataService.recreateDatabase()
     }
 
-    func cleareCash() {
-        cleareFileManager()
+    func clearCash() {
+        clearFileManager()
         cleareCoreData()
     }
 }
