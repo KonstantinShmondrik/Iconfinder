@@ -84,9 +84,11 @@ class SearchResultTableCell: UITableViewCell {
 
         titleLabel.font = AppFont.Style.regularText
         titleLabel.textAlignment = .left
+        titleLabel.textColor = AppColor.textMain
 
         subtitleLabel.font = AppFont.Style.subtitle
         subtitleLabel.textAlignment = .left
         subtitleLabel.numberOfLines = 0
+        subtitleLabel.textColor = .textMain
     }
 }

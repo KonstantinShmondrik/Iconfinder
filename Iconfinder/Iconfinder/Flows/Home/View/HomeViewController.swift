@@ -86,7 +86,9 @@ class HomeViewController: UIViewController {
     
     private func stylize() {
         view.backgroundColor = AppColor.backgroundMain
-        
+
+        tableView.backgroundColor = .clear
+
         searchFTextField.layer.borderColor = AppColor.line.cgColor
         searchFTextField.clipsToBounds = true
         searchFTextField.layer.cornerRadius = 8
